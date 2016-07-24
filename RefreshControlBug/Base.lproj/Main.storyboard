@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11163.2" systemVersion="16A239j" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="4tK-tF-qtC">
+    <dependencies>
+        <deployment version="2336" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11133"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="vBG-wS-ORr">
+            <objects>
+                <navigationController id="4tK-tF-qtC" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6B4-dM-ZLg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="yQQ-BV-1Tc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ooN-SP-Oap" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-767" y="139"/>
+        </scene>
+        <!--UIRefreshControl bug-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController title="UIRefreshControl bug" id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oit-f6-rb6">
+                                <state key="normal" title="View did load"/>
+                                <connections>
+                                    <segue destination="V6B-6a-ZVz" kind="show" identifier="didLoad" id="5PV-mN-ULw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Irm-2S-FP0">
+                                <state key="normal" title="View will appear"/>
+                                <connections>
+                                    <segue destination="V6B-6a-ZVz" kind="show" identifier="willAppear" id="1QD-Wf-H47"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qBm-Ix-Ukx">
+                                <state key="normal" title="View did appear"/>
+                                <connections>
+                                    <segue destination="V6B-6a-ZVz" kind="show" identifier="didAppear" id="tea-fO-9Ta"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9bf-wK-GM1">
+                                <state key="normal" title="View did appear - changing offset"/>
+                                <connections>
+                                    <segue destination="V6B-6a-ZVz" kind="show" identifier="didAppearChangingOffset" id="EES-9b-fDv"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Irm-2S-FP0" firstAttribute="top" secondItem="oit-f6-rb6" secondAttribute="bottom" constant="8" id="23u-oe-zcL"/>
+                            <constraint firstItem="qBm-Ix-Ukx" firstAttribute="top" secondItem="Irm-2S-FP0" secondAttribute="bottom" constant="8" id="2d2-ZV-MrI"/>
+                            <constraint firstItem="oit-f6-rb6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="K4y-AC-pzp"/>
+                            <constraint firstItem="qBm-Ix-Ukx" firstAttribute="leading" secondItem="oit-f6-rb6" secondAttribute="leading" id="Tdv-UY-fvC"/>
+                            <constraint firstItem="Irm-2S-FP0" firstAttribute="leading" secondItem="oit-f6-rb6" secondAttribute="leading" id="Wwo-Hx-LJk"/>
+                            <constraint firstItem="9bf-wK-GM1" firstAttribute="leading" secondItem="qBm-Ix-Ukx" secondAttribute="leading" id="Y00-rP-rjR"/>
+                            <constraint firstItem="9bf-wK-GM1" firstAttribute="top" secondItem="qBm-Ix-Ukx" secondAttribute="bottom" constant="8" id="YlD-Z6-F2C"/>
+                            <constraint firstItem="oit-f6-rb6" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="15" id="dDr-9k-bna"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="tWC-0f-0WN"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="121" y="139"/>
+        </scene>
+        <!--UIRefreshControl bug-->
+        <scene sceneID="aVG-as-tG1">
+            <objects>
+                <tableViewController title="UIRefreshControl bug" id="V6B-6a-ZVz" customClass="TableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="dOL-Z1-5ZB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Yle-Tv-d8M">
+                                <frame key="frameInset" minY="92" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Yle-Tv-d8M" id="UTz-6S-ELV">
+                                    <frame key="frameInset" width="375" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="V6B-6a-ZVz" id="RRh-9V-tJy"/>
+                            <outlet property="delegate" destination="V6B-6a-ZVz" id="45c-7w-hsY"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lk5-Kh-2Tp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="998" y="139"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="EES-9b-fDv"/>
+    </inferredMetricsTieBreakers>
+</document>
